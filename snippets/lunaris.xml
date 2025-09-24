@@ -31,7 +31,7 @@
   
   <project path="art" name="art" remote="lunaris" />
   
-  <project path="bionic" name="dopaemon/LunarisAOSP_bionic" groups="pdk" revision="16" remote="github" />
+  <project path="bionic" name="bionic" groups="pdk" remote="lunaris" />
 
   <!-- Bootable -->
   <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" groups="pdk-cw" remote="lunaris" />
