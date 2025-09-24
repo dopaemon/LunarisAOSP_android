@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <remote  name="gitlab"
+           fetch="https://gitlab.com/" />
+
   <remote name="lunaris"
           fetch="https://github.com/Lunaris-AOSP/"
           sync-c="true"
@@ -25,7 +31,7 @@
   
   <project path="art" name="art" remote="lunaris" />
   
-  <project path="bionic" name="bionic" groups="pdk" remote="lunaris"/>
+  <project path="bionic" name="dopaemon/LunarisAOSP_bionic" groups="pdk" revision="16" remote="github" />
 
   <!-- Bootable -->
   <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" groups="pdk-cw" remote="lunaris" />
@@ -75,14 +81,14 @@
 
   <!-- Frameworks  -->
   <project path="frameworks/av" name="frameworks_av" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="lunaris" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="lunaris" />
+  <project path="frameworks/base" name="dopaemon/LunarisAOSP_frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" revision="16" remote="github" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="lunaris" />
-  <project path="frameworks/native" name="frameworks_native" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="lunaris" />
+  <project path="frameworks/native" name="dopaemon/LunarisAOSP_frameworks_native" groups="pdk-cw-fs,pdk-fs,sysui-studio" revision="16" remote="github" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="lunaris" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" groups="pdk,sysui-studio" remote="lunaris" />
 
   <!-- Kernel -->
-  <project path="kernel/configs" name="kernel_configs" groups="vts,pdk" remote="lunaris" />
+  <project path="kernel/configs" name="dopaemon/LunarisAOSP_kernel_configs" groups="vts,pdk" revision="16" remote="github" />
 
   <!-- lunaris Packages  -->
   <project path="packages/apps/Contacts" name="packages_apps_Contacts" groups="pdk-fs" remote="lunaris" />
@@ -141,4 +147,11 @@
   <project path="vendor/pixel-style" name="vendor_pixel-style" remote="lunaris" />
   <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="lunaris" />
   <project path="vendor/gms" name="vendor_gms" remote="lunaris-codeberg" clone-depth="1" />
+
+  <!-- Lindroid additions -->
+  <project path="vendor/lindroid" name="Linux-On-LineageOS/vendor_lindroid" revision="refs/heads/lindroid-22.1" remote="github" />
+  <project path="vendor/lindroid-drm-loopback" name="Linux-on-droid/lindroid-drm-loopback" revision="refs/heads/master" remote="github" />
+  <project path="external/lxc" name="Linux-on-droid/external_lxc" revision="refs/heads/lindroid-21" remote="github"/>
+  <project path="libhybris" name="Linux-on-droid/libhybris" revision="refs/heads/tmp" remote="github" />
+
 </manifest>

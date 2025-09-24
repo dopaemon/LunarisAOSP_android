@@ -1,11 +1,11 @@
 # Initialize local repository
 ```
-repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
+repo init -u https://github.com/dopaemon/LunarisAOSP_android.git -b 16 --git-lfs
 ```
 
 # Sync up
 ```
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
 ```
 
 # Build
